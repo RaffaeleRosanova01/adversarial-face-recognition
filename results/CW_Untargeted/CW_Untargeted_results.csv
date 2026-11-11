@@ -1,0 +1,9 @@
+attack_name,max_iter,learning_rate,confidence,accuracy,valid_images,saved_images,skipped_budget,total_images,mean_linf_applied,time_elapsed_s
+CW_Untargeted,1,0.01,0.0,28.0,100,100,0,100,0.0038,677.4
+CW_Untargeted,1,0.1,0.0,2.0,100,100,0,100,0.05,770.82
+CW_Untargeted,5,0.01,0.0,4.0,100,100,0,100,0.0064,1841.94
+CW_Untargeted,5,0.1,0.0,2.0,100,100,0,100,0.05,1939.44
+CW_Untargeted,10,0.01,0.0,4.0,100,100,0,100,0.0064,3394.79
+CW_Untargeted,10,0.1,0.0,2.0,100,100,0,100,0.05,3489.74
+CW_Untargeted,20,0.01,0.0,4.0,100,100,0,100,0.0064,12156.82
+CW_Untargeted,20,0.1,0.0,2.0,100,100,0,100,0.05,6477.53

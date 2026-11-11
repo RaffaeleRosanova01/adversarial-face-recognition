@@ -1,0 +1,10 @@
+Family,Metric,No_Defense_%,JPEG_q10_%,JPEG_q50_%,JPEG_q80_%,Delta_q10_%,Delta_q50_%,Delta_q80_%
+Genuine,accuracy,83.92,70.62,83.55,83.95,-13.30,-0.37,+0.03
+BIM_Targeted_Fixed,asr,70.83,10.17,58.00,63.50,-60.67,-12.83,-7.33
+BIM_Untargeted,accuracy,4.00,27.33,11.00,8.00,+23.33,+7.00,+4.00
+CW_Untargeted,accuracy,18.00,30.92,24.08,19.42,+12.92,+6.08,+1.42
+DeepFool_Untargeted,accuracy,12.83,43.67,21.08,15.58,+30.83,+8.25,+2.75
+FGSM_Targeted_Fixed,asr,3.83,1.00,3.17,3.67,-2.83,-0.67,-0.17
+FGSM_Untargeted,accuracy,7.00,24.17,13.00,9.83,+17.17,+6.00,+2.83
+PGD_Targeted_Fixed,asr,62.17,0.83,46.33,54.17,-61.33,-15.83,-8.00
+PGD_Untargeted,accuracy,7.50,31.83,19.50,14.00,+24.33,+12.00,+6.50

@@ -1,0 +1,8 @@
+attack_name,max_iter,epsilon,nn1_accuracy,nn2_accuracy,nn2_correct,total_images,mean_linf,time_elapsed_s
+DeepFool,1,1e-06,14.14,72.0,72,100,0.0442,0.64
+DeepFool,5,1e-06,2.06,72.0,72,100,0.0473,0.22
+DeepFool,10,1e-06,1.04,72.0,72,100,0.0471,0.21
+DeepFool,20,1e-06,1.04,72.0,72,100,0.0471,0.21
+DeepFool,50,1e-06,1.04,72.0,72,100,0.0471,0.2
+DeepFool,100,1e-06,1.04,72.0,72,100,0.047,0.21
+DeepFool,175,1e-06,1.04,72.0,72,100,0.0471,0.21

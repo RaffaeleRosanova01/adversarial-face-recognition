@@ -1,0 +1,5 @@
+Configuration,Genuine_Accuracy_%,Adversarial_Accuracy_%,Delta_Genuine_%,Delta_Adversarial_%
+No Defense,85.17,14.29,—,—
+JPEG q=10,72.50,37.86,-12.67,+23.57
+JPEG q=50,85.33,24.64,+0.17,+10.36
+JPEG q=80,85.17,18.57,+0.00,+4.29

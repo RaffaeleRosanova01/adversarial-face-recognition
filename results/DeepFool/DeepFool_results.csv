@@ -1,0 +1,8 @@
+attack_name,max_iter,epsilon,accuracy,correct_predictions,saved_images,failed_budget,evaluated_images,total_images,mean_linf_applied,time_elapsed_s
+DeepFool,1,1e-06,14.14,14,99,1,99,100,0.0442,117.21
+DeepFool,5,1e-06,2.06,2,97,3,97,100,0.0473,115.97
+DeepFool,10,1e-06,1.04,1,96,4,96,100,0.0471,119.76
+DeepFool,20,1e-06,1.04,1,96,4,96,100,0.0471,105.63
+DeepFool,50,1e-06,1.04,1,96,4,96,100,0.0471,118.99
+DeepFool,100,1e-06,1.04,1,96,4,96,100,0.047,105.95
+DeepFool,175,1e-06,1.04,1,96,4,96,100,0.0471,116.78

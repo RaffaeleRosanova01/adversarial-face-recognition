@@ -1,0 +1,8 @@
+attack_name,target_mode,epsilon,nn1_asr,nn2_asr,nn2_successful,total_images,time_elapsed_s
+FGSM_Targeted_Fixed,Fixed,0.001,0.0,0.0,0,1000,10.12
+FGSM_Targeted_Fixed,Fixed,0.003,0.0,0.0,0,1000,10.06
+FGSM_Targeted_Fixed,Fixed,0.005,0.3,0.0,0,1000,10.26
+FGSM_Targeted_Fixed,Fixed,0.01,1.7,0.0,0,1000,10.03
+FGSM_Targeted_Fixed,Fixed,0.03,8.0,0.5,5,1000,10.84
+FGSM_Targeted_Fixed,Fixed,0.05,8.0,0.5,5,1000,10.2
+FGSM_Targeted_Fixed,Fixed,0.1,4.9,1.9,19,1000,10.01

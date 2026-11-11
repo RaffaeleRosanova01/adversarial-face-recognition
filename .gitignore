@@ -1,0 +1,18 @@
+# Data, generated examples and weights are not versioned
+data/
+adversarial_data/
+detector_dataset/
+weights/
+*.pth
+*.pkl
+*.npy
+*.zip
+*.tar
+*.tar.gz
+
+# Python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+.venv/

@@ -1,0 +1,8 @@
+attack_name,epsilon,correct_predictions,total_images,accuracy,time_elapsed_s
+FGSM,0.001,771,1000,77.1,17.33
+FGSM,0.003,458,1000,45.8,17.27
+FGSM,0.005,228,1000,22.8,22.37
+FGSM,0.01,67,1000,6.7,20.57
+FGSM,0.03,16,1000,1.6,17.95
+FGSM,0.05,7,1000,0.7,16.22
+FGSM,0.1,1,1000,0.1,15.66
