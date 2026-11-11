@@ -234,14 +234,13 @@ def eer_threshold(scores, labels, grid=np.linspace(0.01, 0.99, 200)):
 
 
 def train_detector(backbone, train_files, val_files, out_path, epochs=50, patience=20, lr=1e-4,
-                   weight_decay=1e-4, batch_size=256, weighted=False, device="cpu"):
+                   weight_decay=1e-4, batch_size=256, weighted=True, device="cpu"):
     """
     Full fine-tuning with Adam and cross-entropy; keeps the weights with the lowest
     validation loss and stops after `patience` epochs without improvement.
 
-    The released weights were trained with weighted=False: the training split is read
-    in the (already shuffled) order of its CSV. weighted=True enables the CW/DeepFool
-    oversampling sampler instead.
+    weighted=True oversamples CW and DeepFool examples (weighted_sampler); with
+    weighted=False the training split is read in the (already shuffled) order of its CSV.
     """
     model = Detector(backbone, pretrained=True).to(device)
     train_ds = DetectorDataset(train_files)

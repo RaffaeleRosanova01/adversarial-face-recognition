@@ -70,7 +70,8 @@ more iterations overfit the perturbation to NN1.
 ### Defences
 
 **Adversarial detector.** A binary classifier trained on 6000 adversarial examples from 40 attack configurations
-(weak to strong, all five families) and as many clean images. The split is **identity-disjoint** (70/20/10
+(weak to strong, all five families) and as many clean images; CW and DeepFool examples, the hardest to detect,
+are oversampled ×3 during training. The split is **identity-disjoint** (70/20/10
 subjects), so the test identities are never seen in training; the threshold (0.11) is set at the Equal Error
 Rate on the validation set.
 
@@ -129,8 +130,6 @@ Points found while reorganising the code, documented so that the numbers are rea
 - **DeepFool and CW denominators.** Examples over the budget count as failed attacks (fixed denominator of 100);
   the original DeepFool numbers excluded them, so accuracies such as 1.04% (1/96) are slightly optimistic for the
   attacker.
-- **Detector training.** The released detector was trained without the CW/DeepFool oversampling sampler
-  (`--weighted` enables it).
 - The refactored code was checked against the original runs: NN1 and NN2 clean accuracy match exactly, FGSM differs
   by one image in 1000 (ε = 0.005: 22.9% vs 22.8%; ε = 0.01: 6.8% vs 6.7%; CPU vs the original GPU run), and the
   identity-disjoint split reproduces the original subjects in every split.

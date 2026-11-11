@@ -19,7 +19,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--backbone", default="efficientnet", choices=["efficientnet", "mobilenet"])
 parser.add_argument("--epochs", type=int, default=50)
 parser.add_argument("--patience", type=int, default=20)
-parser.add_argument("--weighted", action="store_true", help="oversample CW / DeepFool examples")
+parser.add_argument("--no-weighted", dest="weighted", action="store_false",
+                    help="disable the CW / DeepFool oversampling")
 args = parser.parse_args()
 
 if not os.path.isdir(os.path.join(config.DETECTOR_DATA_DIR, "adversarial")):
