@@ -119,7 +119,8 @@ Points found while reorganising the code, documented so that the numbers are rea
 - **CW error-specific results are invalid (ART bug).** In ART ≤ 1.20.1, `CarliniLInfMethod` checks the success of
   a targeted attack with `!=` instead of `==` against the target, so it keeps the candidates that *miss* the
   target. This is why CW targeted shows 0% ASR at every configuration. `advfr.attacks.CarliniLInfMethodFixed`
-  corrects the check (identical to ART for untargeted attacks); the targeted CW experiments were not rerun.
+  corrects the check (identical to ART for untargeted attacks); the targeted CW experiments were not rerun. Reported
+  upstream with a fix in [Trusted-AI/adversarial-robustness-toolbox#2878](https://github.com/Trusted-AI/adversarial-robustness-toolbox/pull/2878).
 - **NN2 transferability reference.** Adversarial examples are stored at 160×160 (NN1 input) and upsampled for NN2.
   Clean images through the same pipeline give 89.0% on NN2, not 95.5%: the reference for the transfer results is
   89.0%, and about 6.5 points of the NN2 drop come from the resolution, not from the attack
