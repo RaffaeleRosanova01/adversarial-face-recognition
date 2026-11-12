@@ -159,7 +159,11 @@ results/              CSVs and plots of the experiments
 
 ```bash
 pip install -r requirements.txt
+pip install --no-deps facenet-pytorch
 ```
+
+`facenet-pytorch` (NN1) is installed without its dependencies because it pins old versions of PyTorch and Pillow
+that do not install on recent Python versions; its runtime dependencies are in `requirements.txt`.
 
 Data and weights are not included (VGGFace2 licence, file size):
 
