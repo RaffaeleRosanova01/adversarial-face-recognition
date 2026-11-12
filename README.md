@@ -47,6 +47,10 @@ Clean accuracy of NN1: **85.1%** (NN2: 95.5%).
 | FGSM | 1.7 | 8.0 | 4.9 |
 | BIM / PGD, 20 iterations | 20.6 | 98.5 | 100.0 |
 
+Carlini & Wagner L∞ (error-specific, 100 images): 3% ASR with 1 iteration and 34% with 20 iterations. With 20
+iterations every image reaches the target, but 66 need a perturbation above ε = 0.1 and the 34 within the budget have a
+mean L∞ of 0.09, while PGD reaches the same target for every image at ε = 0.05.
+
 CW L∞ reaches 4% accuracy with a mean L∞ of 0.006; DeepFool reaches 1% with a mean of 0.047.
 A perturbation of ε = 0.01 (≈ 2.5 grey levels) is enough to drop identification below 7% with every
 attack, and iterative attacks reach any chosen identity with ε = 0.03. Single-step FGSM does not work as a
@@ -116,10 +120,10 @@ an attacker unaware of it.
 
 Points found while reorganising the code, documented so that the numbers are read correctly:
 
-- **CW error-specific results are invalid (ART bug).** In ART ≤ 1.20.1, `CarliniLInfMethod` checks the success of
-  a targeted attack with `!=` instead of `==` against the target, so it keeps the candidates that *miss* the
-  target. This is why CW targeted shows 0% ASR at every configuration. `advfr.attacks.CarliniLInfMethodFixed`
-  corrects the check (identical to ART for untargeted attacks); the targeted CW experiments were not rerun. Reported
+- **Bug in ART's targeted CW.** In ART ≤ 1.20.1, `CarliniLInfMethod` checks the success of a targeted attack with
+  `!=` instead of `==` against the target, so it keeps the candidates that *miss* the target: the first run of the
+  error-specific CW experiments gave 0% ASR at every configuration. `advfr.attacks.CarliniLInfMethodFixed` corrects
+  the check (identical to ART for untargeted attacks) and the error-specific CW results above come from it. Reported
   upstream with a fix in [Trusted-AI/adversarial-robustness-toolbox#2878](https://github.com/Trusted-AI/adversarial-robustness-toolbox/pull/2878).
 - **NN2 transferability reference.** Adversarial examples are stored at 160×160 (NN1 input) and upsampled for NN2.
   Clean images through the same pipeline give 89.0% on NN2, not 95.5%: the reference for the transfer results is
